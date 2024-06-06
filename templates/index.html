@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE F&O Prices</title>
+    <style>
+        table.dataframe {
+            border-collapse: collapse;
+            border: 2px solid #555;
+            width: 100%;
+        }
+        table.dataframe th, table.dataframe td {
+            border: 1px solid #555;
+            padding: 6px 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    {% for table in tables %}
+        {{titles[loop.index]}}
+        {{ table|safe }}
+    {% endfor %}
+</body>
+</html>
